@@ -56,7 +56,6 @@ class CustomDataset(utils.Dataset):
         self.add_class("scratch", 1, "scratch")
         
         # Train or validation dataset?
-        assert subset in ["train", "val"]
         dataset_dir = os.path.join(dataset_dir + "dataset/" + subset)
       
         # Load annotations
@@ -182,7 +181,6 @@ def color_splash(image, mask):
 
 
 def detect_and_color_splash(model, image_path=None):
-    assert image_path 
     # Run model detection and generate the color splash effect
     print("Running on {}".format(args.image))
         # Read image
